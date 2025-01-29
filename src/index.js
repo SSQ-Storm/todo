@@ -6,17 +6,19 @@ import { AppHeader } from "./component/AppHeader";
 
 const App = () => {
 
-    const value = '<script>alert ("")</script>';
-
+    const todoData = [
+        { label: 'Drink Coffee', important: false },
+        { label: 'Implement React Application', important: true },
+        { label: 'Make notes from your stud', important: false },
+        { label: 'Do not drink alchohol', important: false },
+    ];   
     return (
         <div>
-            {/*{ isLoggedIn ? null : loginBox }*/}
-            { value }
             <AppHeader />
             <SearchPanel />
-            <TodoList/>
+            <TodoList todos =  {todoData} />
         </div>
-    );
+    )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
