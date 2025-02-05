@@ -1,6 +1,6 @@
 import React from "react";
 
-export const SearchPanel = () => {
+const SearchPanel = () => {
 
     const searchText = 'Type here to search';
     const searchStyle = {
@@ -13,3 +13,5 @@ export const SearchPanel = () => {
         placeholder={searchText}
         disabled={true} />;
 };
+
+export default SearchPanel
