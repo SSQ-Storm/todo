@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import TodoList from "./component/todo-list";
 import SearchPanel from "./component/SearchPanel";
 import AppHeader from "./component/AppHeader";
+import ItemStatusFilter from "./component/item-status-filter";
 
 const App = () => {
 
@@ -16,10 +17,10 @@ const App = () => {
         <div>
             <AppHeader />
             <SearchPanel />
-            <TodoList todos =  {todoData} />
+            <TodoList todos = {todoData} />
+            <ItemStatusFilter/>
         </div>
     )
 }
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(<App/>);

@@ -4,7 +4,7 @@ const SearchPanel = () => {
 
     const searchText = 'Type here to search';
     const searchStyle = {
-        fontSize: '20px'
+        fontSize: '20rem'
     };
 
 
