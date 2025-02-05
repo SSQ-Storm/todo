@@ -1,6 +1,7 @@
 import React from 'react';
+import './item-status-filter.css';
 
-export const ItemStatusFilter = () => {
+const ItemStatusFilter = () => {
     return (
         <div className={"btn-group"}>
             <button type={"button"}
@@ -12,5 +13,4 @@ export const ItemStatusFilter = () => {
         </div>
     );
 };
-
 export default ItemStatusFilter;
