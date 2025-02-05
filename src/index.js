@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
-import TodoList from "./component/TodoList";
+import TodoList from "./component/todo-list";
 import SearchPanel from "./component/SearchPanel";
 import AppHeader from "./component/AppHeader";
 
