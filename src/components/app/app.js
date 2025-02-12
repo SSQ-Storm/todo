@@ -8,7 +8,9 @@ import './app.css';
 
 export  default  class  App extends Component {
 
-    state = {
+    maxId = 100;
+
+     state = {
      todoData : [
             { label: 'Drink Coffee', important: false, id: 1 },
             { label: 'Make Awesome App', important: true, id: 2 },
@@ -20,17 +22,35 @@ export  default  class  App extends Component {
         this.setState(({todoData} ) => {
             const idx = todoData.findIndex((element) => element.id === id);
             // console.log(idx);
-            const newArray = [
+                const newArray = [
                 ...todoData.slice(0, idx),
                 ...todoData.slice(idx +1)
             ];
-            
+
             return{
                 todoData: newArray
             };
         });
     };
-
+    addItem = (text) => {
+        // console.log('Added', text);
+        // generate id  &  add element in array
+        const newItem = {
+            label: text,
+            important: false,
+            id: this.maxId++
+        };
+        this.setState(({todoData}) => {
+            // todoDate.push(newItem);
+            const newArr = [
+                ...todoData,
+                newItem
+            ];
+            return {
+                todoData: newArr
+            };
+        });
+    }
     render() {
         return (
             <div className="todo-app">
@@ -42,7 +62,8 @@ export  default  class  App extends Component {
 
                 <TodoList todos={ this.state.todoData}
                           onDeleted = { this.deleteItem }/>
-                    <ItemAddForm />
+                <ItemAddForm onItemAdded = {this.addItem } />
+
             </div>
         );
     };
