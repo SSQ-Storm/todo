@@ -1,3 +1,3 @@
-import ItemStatusFilter from '../item-status-filter';
+import SearchPanel from './search-panel';
 
-export default ItemStatusFilter;
+export default SearchPanel;
